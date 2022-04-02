@@ -10,10 +10,10 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) => Scaffold(
-        drawer: Drawer(
+        drawer: constraints.maxWidth < 500 ? Drawer(
           backgroundColor: Theme.of(context).backgroundColor,
           child: const HomeMenuWidget(),
-        ),
+        ) : null,
         backgroundColor: Theme.of(context).backgroundColor,
         body: Padding(
           padding: EdgeInsets.only(

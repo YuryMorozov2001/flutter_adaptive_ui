@@ -11,11 +11,12 @@ class HomeMenuWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-          right: 16.0,
-          top: Scaffold.of(context).isDrawerOpen == true || Scaffold.of(context).hasDrawer == true
-              ? MediaQuery.of(context).padding.top + 16
-              : 4,
-          left: Scaffold.of(context).isDrawerOpen == true || Scaffold.of(context).hasDrawer == true ? 16 : 0),
+        right: 16.0,
+        top: Scaffold.of(context).hasDrawer == true
+            ? MediaQuery.of(context).padding.top + 16
+            : 4,
+        left: Scaffold.of(context).hasDrawer == true ? 16 : 0,
+      ),
       child: SizedBox(
         height: 100.h,
         width: 55,
